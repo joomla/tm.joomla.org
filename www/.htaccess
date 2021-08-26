@@ -542,3 +542,9 @@ RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule .* index.php [L]
 ###########################################
+RewriteCond %{HTTP_HOST} ^trademark\.joomla\.org$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.trademark\.joomla\.org$
+RewriteRule ^/?$ "https\:\/\/tm\.joomla\.org\/" [R=301,L]
+RewriteCond %{HTTP_HOST} ^license\.joomla\.org$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.license\.joomla\.org$
+RewriteRule ^/?$ "https\:\/\/tm\.joomla\.org\/" [R=301,L]
